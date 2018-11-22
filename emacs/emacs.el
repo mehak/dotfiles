@@ -74,13 +74,16 @@ Return a list of installed packages or nil for every skipped package."
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Bitstream Vera Sans Mono" :foundry "Bits" :slant normal :weight normal :height 83 :width normal)))))
 
+
 ;; Vim keybindings
 (require 'evil)
 (evil-mode t)
 
+
 ;; Helm.. which may not be working properly all the time
 (require 'helm-config)
 (helm-mode 1)
+
 
 ;;;;;;;;;;; Indentation ;;;;;;;;;;;;;;;;;;;;
 
@@ -91,6 +94,7 @@ Return a list of installed packages or nil for every skipped package."
 (setq powershell-indent 2)
 
 ;;;;;;;;;;; Indentation ;;;;;;;;;;;;;;;;;;;;
+
 
 ;; Setup a ruler (vim) like display at bottom
 (line-number-mode 1)
@@ -107,8 +111,12 @@ Return a list of installed packages or nil for every skipped package."
 
 (fset 'perl-mode 'cperl-mode)
 
+
+;; Term mode and helpful keybindings
 (require 'term)
 
+;; Helpful keybindings for term-mode
+;; http://joelmccracken.github.io/entries/switching-between-term-mode-and-line-mode-in-emacs-term/
 (defun jnm/term-toggle-mode ()
   "Toggle between line mode and char mode"
   (interactive)
@@ -121,6 +129,7 @@ Return a list of installed packages or nil for every skipped package."
 (define-key term-mode-map (kbd "C-c C-k") 'jnm/term-toggle-mode)
 (define-key term-raw-map (kbd "C-c C-k") 'jnm/term-toggle-mode)
 
+
 ;; Slack configuration
 ;; I'm using use-package and evil
 (load "~/.emacs.d/custom/slack")
@@ -132,11 +141,14 @@ Return a list of installed packages or nil for every skipped package."
 
 (global-unset-key (kbd "C-z"))
 
+
 ; This doesn't seem to work anymore...
 ;(require 'ox-confluence)
 
+
 (require 'epa-file)
 (epa-file-enable)
+
 
 (define-minor-mode sensitive-mode
   "For sensitive files like password lists.
@@ -168,8 +180,10 @@ Null prefix argument turns off the mode."
       (append '(("\\.gpg$" . sensitive-mode))
               auto-mode-alist))
 
+
 (setq-default indent-tabs-mode nil)
 (setq-default fill-column 75)
+
 
 ;; Make ibuffer default
 (global-set-key "\C-x\C-b" 'ibuffer)
@@ -183,13 +197,16 @@ Null prefix argument turns off the mode."
 ;; Remove menu bar
 (menu-bar-mode -1)
 
+
 ;; Smart Tab
 (require 'smart-tab)
 (global-smart-tab-mode 1)
 
+
 ;; Slime
 (setq inferior-lisp-program "/usr/bin/sbcl")
 (setq slime-contribs '(slime-fancy))
+
 
 ;; whitespace-mode
 (require 'whitespace)
@@ -198,8 +215,10 @@ Null prefix argument turns off the mode."
 ;; only show bad whitespace
 (setq whitespace-style '(trailing space-before-tab indentation empty space-after-tab))
 
+
 ;; yassnippet
 (yas-global-mode 1)
+
 
 ;; visual-basic-mode
 (add-to-list 'load-path "~/.emacs.d/visual-basic-mode")
@@ -207,13 +226,16 @@ Null prefix argument turns off the mode."
 (push '("\\.\\(?:frm\\|\\(?:ba\\|cl\\|vb\\)s\\)\\'" . visual-basic-mode)
          auto-mode-alist)
 
+
 ;; Org-mode reveal.js export
 (require 'ox-reveal)
 (setq org-reveal-title-slide  "<p>%t</p><p>%a</p>")
 
+
 ;; Smartparens minor mode
 (require 'smartparens-config)
 (add-hook 'prog-mode-hook #'smartparens-strict-mode)
+
 
 ;; evil-magit
 ;; optional: this is the evil state that evil-magit will use
@@ -222,9 +244,11 @@ Null prefix argument turns off the mode."
 ;; (setq evil-magit-use-y-for-yank nil)
 (require 'evil-magit)
 
+
 ;; rainbow delimeters
 (require 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+
 
 ;; evil-lisp
 (require 'evil-lispy)
