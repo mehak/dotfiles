@@ -44,6 +44,7 @@ Return a list of installed packages or nil for every skipped package."
                           'magit
                           'evil-magit
                           'use-package
+                          'counsel
                           'yasnippet)
 
 (autoload 'dired-async-mode "dired-async.el" nil t)
@@ -65,7 +66,7 @@ Return a list of installed packages or nil for every skipped package."
  '(org-export-backends (quote (ascii html icalendar latex man md odt org texinfo)))
  '(package-selected-packages
    (quote
-    (evil-lispy rainbow-delimiters evil-magit ox-reveal ## auto-org-md kotlin-mode xpm yasnippet-snippets yasnippet csharp-mode coffee-mode slime lua-mode xml-rpc use-package spinner slack queue powershell pkg-info org magit highlight-symbol helm evil-visual-mark-mode csv-mode)))
+    (counsel evil-lispy rainbow-delimiters evil-magit ox-reveal ## auto-org-md kotlin-mode xpm yasnippet-snippets yasnippet csharp-mode coffee-mode slime lua-mode xml-rpc use-package spinner slack queue powershell pkg-info org magit highlight-symbol helm evil-visual-mark-mode csv-mode)))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -80,9 +81,8 @@ Return a list of installed packages or nil for every skipped package."
 (evil-mode t)
 
 
-;; Helm.. which may not be working properly all the time
-(require 'helm-config)
-(helm-mode 1)
+;; Ivy Mode
+(ivy-mode 1)
 
 
 ;;;;;;;;;;; Indentation ;;;;;;;;;;;;;;;;;;;;
