@@ -1,3 +1,6 @@
+;; Neither of these are my code, so the copyright/license doesn't apply
+;; TODO: Properly attribute these functions
+
 ;; Toggle window split
 (defun toggle-window-split ()
   (interactive)
