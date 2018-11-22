@@ -103,7 +103,7 @@ Return a list of installed packages or nil for every skipped package."
 ;; Remove cut/copy/etc toolbar
 (tool-bar-mode -1)
 
-;; Don't really remember what this does... emacs added it
+;; Enable erase-buffer
 (put 'erase-buffer 'disabled nil)
 
 ;; Copy to primary clipboard too
@@ -146,6 +146,7 @@ Return a list of installed packages or nil for every skipped package."
 ;(require 'ox-confluence)
 
 
+;; Easy PG (GPG)
 (require 'epa-file)
 (epa-file-enable)
 
