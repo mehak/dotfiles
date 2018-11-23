@@ -61,12 +61,15 @@ Return a list of installed packages or nil for every skipped package."
  '(blink-cursor-mode nil)
  '(coffee-tab-width 2)
  '(column-number-mode t)
- '(custom-enabled-themes (quote (wombat)))
+ '(custom-enabled-themes (quote (cyberpunk)))
+ '(custom-safe-themes
+   (quote
+    ("d1cc05d755d5a21a31bced25bed40f85d8677e69c73ca365628ce8024827c9e3" default)))
  '(org-agenda-files (quote ("~/projects/dst/records/notes.org")))
  '(org-export-backends (quote (ascii html icalendar latex man md odt org texinfo)))
  '(package-selected-packages
    (quote
-    (counsel evil-lispy rainbow-delimiters evil-magit ox-reveal ## auto-org-md kotlin-mode xpm yasnippet-snippets yasnippet csharp-mode coffee-mode slime lua-mode xml-rpc use-package spinner slack queue powershell pkg-info org magit highlight-symbol helm evil-visual-mark-mode csv-mode)))
+    (cyberpunk-theme counsel evil-lispy rainbow-delimiters evil-magit ox-reveal ## auto-org-md kotlin-mode xpm yasnippet-snippets yasnippet csharp-mode coffee-mode slime lua-mode xml-rpc use-package spinner slack queue powershell pkg-info org magit highlight-symbol helm evil-visual-mark-mode csv-mode)))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
