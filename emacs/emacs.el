@@ -137,7 +137,7 @@ Return a list of installed packages or nil for every skipped package."
 (use-package alert
   :commands (alert)
   :init
-  (setq alert-default-style 'notifier))
+  (setq alert-default-style 'libnotify))
 
 (global-unset-key (kbd "C-z"))
 
