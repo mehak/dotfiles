@@ -259,6 +259,10 @@ Null prefix argument turns off the mode."
 (add-hook 'after-init-hook 'global-company-mode)
 
 
+;; pdf-tools
+(pdf-tools-install)
+
+
 ;; custom functions
 (load "~/.emacs.d/custom/custom.el")
 (custom-set-faces
