@@ -69,7 +69,7 @@ Return a list of installed packages or nil for every skipped package."
  '(org-export-backends (quote (ascii html icalendar latex man md odt org texinfo)))
  '(package-selected-packages
    (quote
-    (cyberpunk-theme counsel evil-lispy rainbow-delimiters evil-magit ox-reveal ## auto-org-md kotlin-mode xpm yasnippet-snippets yasnippet csharp-mode coffee-mode slime lua-mode xml-rpc use-package spinner slack queue powershell pkg-info org magit highlight-symbol helm evil-visual-mark-mode csv-mode)))
+    (company sly exwm cyberpunk-theme counsel evil-lispy rainbow-delimiters evil-magit ox-reveal ## auto-org-md kotlin-mode xpm yasnippet-snippets yasnippet csharp-mode coffee-mode lua-mode xml-rpc use-package spinner slack queue powershell pkg-info org magit highlight-symbol helm evil-visual-mark-mode csv-mode)))
  '(tool-bar-mode nil))
 
 (set-face-attribute 'default nil :font "Source Code Pro" :height 83)
@@ -203,9 +203,8 @@ Null prefix argument turns off the mode."
 (global-smart-tab-mode 1)
 
 
-;; Slime
+;; Sly
 (setq inferior-lisp-program "/usr/bin/sbcl")
-(setq slime-contribs '(slime-fancy))
 
 
 ;; whitespace-mode
