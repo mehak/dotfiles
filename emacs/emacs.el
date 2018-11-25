@@ -261,6 +261,7 @@ Null prefix argument turns off the mode."
 
 ;; pdf-tools
 (pdf-tools-install)
+(evil-set-initial-state 'pdf-view-mode 'normal)
 
 
 ;; custom functions
