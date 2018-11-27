@@ -104,6 +104,7 @@ Return a list of installed packages or nil for every skipped package."
 
 
 ;; Powershell modes
+;; need to fix this for pwsh
 (setq powershell-indent 2)
 (setq powershell-location-of-exe "/usr/bin/pwsh")
 
