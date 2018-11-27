@@ -102,8 +102,11 @@ Return a list of installed packages or nil for every skipped package."
 ;; Set javascript to use 4 spaces on indent
 (setq js-indent-level 4)
 
-;; Set powershell indentation to 2 spaces
+
+;; Powershell modes
 (setq powershell-indent 2)
+(setq powershell-location-of-exe "/usr/bin/pwsh")
+
 
 ;;;;;;;;;;; Indentation ;;;;;;;;;;;;;;;;;;;;
 
