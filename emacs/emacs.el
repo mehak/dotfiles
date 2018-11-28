@@ -287,6 +287,13 @@ Null prefix argument turns off the mode."
 
 ;; tramp
 (setq tramp-default-method "ssh")
+
+
+;; Counsel + flx (swiper ivy)
+(setq ivy-re-builders-alist
+      '((t . ivy--regex-fuzzy)))
+(setq ivy-initial-inputs-alist nil)
+
 ;; custom functions
 (load "~/.emacs.d/custom/custom.el")
 (custom-set-faces
