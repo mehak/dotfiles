@@ -285,6 +285,8 @@ Null prefix argument turns off the mode."
 (pdf-tools-install)
 
 
+;; tramp
+(setq tramp-default-method "ssh")
 ;; custom functions
 (load "~/.emacs.d/custom/custom.el")
 (custom-set-faces
