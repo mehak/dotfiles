@@ -75,9 +75,6 @@ Return a list of installed packages or nil for every skipped package."
 (set-face-attribute 'default nil :font "Source Code Pro" :height 83)
 
 
-;; Vim keybindings
-;; (require 'evil)
-;; (evil-mode t)
 (use-package evil
   :ensure t
   :init
