@@ -9,7 +9,7 @@
 ;; for key in "~/.ssh/dst/*.pub" { ssh-add $(file-name-sans-extension key) }
 ;; run the above through eshell-parse-command
 ;;
-;; 
+;;
 ;; this needs a little work
 ;; (defun eshell/add-my-keys ()
 ;;   (interactive)
