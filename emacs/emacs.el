@@ -301,6 +301,9 @@ Null prefix argument turns off the mode."
 (setq tramp-default-method "ssh")
 
 
+;; exwm
+;; (load "~/.emacs.d/custom/my-exwm.el")
+
 
 ;; custom functions
 (load "~/.emacs.d/custom/custom.el")
