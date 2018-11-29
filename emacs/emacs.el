@@ -93,8 +93,23 @@ Return a list of installed packages or nil for every skipped package."
   (evil-collection-init))
 
 
+;; Counsel + flx (swiper ivy) ;;
 ;; Ivy Mode
 (ivy-mode 1)
+;; Use fuzzy search after every character
+(setq ivy-re-builders-alist
+      '((t . ivy--regex-fuzzy)))
+(setq ivy-initial-inputs-alist nil)
+
+;; basic customization
+(setq ivy-use-virtual-buffers t)
+(setq ivy-count-format "(%d/%d) ")
+;; use arrow for current selection
+(setq ivy-format-function #'ivy-format-function-line)
+
+;; magit ivy-completion
+(setq magit-completing-read-function 'ivy-completing-read)
+
 
 
 ;;;;;;;;;;; Indentation ;;;;;;;;;;;;;;;;;;;;
@@ -289,10 +304,6 @@ Null prefix argument turns off the mode."
 (setq tramp-default-method "ssh")
 
 
-;; Counsel + flx (swiper ivy)
-(setq ivy-re-builders-alist
-      '((t . ivy--regex-fuzzy)))
-(setq ivy-initial-inputs-alist nil)
 
 ;; custom functions
 (load "~/.emacs.d/custom/custom.el")
