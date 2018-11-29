@@ -4,6 +4,13 @@
 (defalias 'ff 'find-file)
 (defalias 'ffo 'find-file-other-window)
 
+;; use ivy for tab completion
+(add-hook 'eshell-mode-hook '(lambda ()
+                               (define-key
+                                 eshell-mode-map
+                                 (kbd "<tab>")
+                                 'completion-at-point)))
+
 ;; copy and paste these for now :-(
 ;; for key in "~/.ssh/*.pub" { ssh-add $(file-name-sans-extension key) }
 ;; for key in "~/.ssh/dst/*.pub" { ssh-add $(file-name-sans-extension key) }
