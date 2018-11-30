@@ -131,6 +131,15 @@ Return a list of installed packages or nil for every skipped package."
 ;; Remove cut/copy/etc toolbar
 (tool-bar-mode -1)
 
+;; Remove menu bar
+(menu-bar-mode -1)
+
+;; remove scroll bars
+(scroll-bar-mode -1)
+
+;; Don't show welcome screen
+(setq inhibit-startup-screen t)
+
 ;; Enable erase-buffer
 (put 'erase-buffer 'disabled nil)
 
@@ -224,12 +233,6 @@ Null prefix argument turns off the mode."
 
 ;; Don't paste at mouse position
 (setq mouse-yank-at-point t)
-
-;; Remove menu bar
-(menu-bar-mode -1)
-
-;; Don't show welcome screen
-(setq inhibit-startup-screen t)
 
 
 ;; Smart Tab
