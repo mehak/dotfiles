@@ -69,8 +69,7 @@ Return a list of installed packages or nil for every skipped package."
  '(org-export-backends (quote (ascii html icalendar latex man md odt org texinfo)))
  '(package-selected-packages
    (quote
-    (command-log-mode ivy-hydra evil-collection company sly exwm cyberpunk-theme counsel evil-lispy rainbow-delimiters evil-magit ox-reveal ## auto-org-md kotlin-mode xpm yasnippet-snippets yasnippet csharp-mode coffee-mode lua-mode xml-rpc use-package spinner slack queue powershell pkg-info org magit highlight-symbol helm evil-visual-mark-mode csv-mode)))
- '(tool-bar-mode nil))
+    (command-log-mode ivy-hydra evil-collection company sly exwm cyberpunk-theme counsel evil-lispy rainbow-delimiters evil-magit ox-reveal ## auto-org-md kotlin-mode xpm yasnippet-snippets yasnippet csharp-mode coffee-mode lua-mode xml-rpc use-package spinner slack queue powershell pkg-info org magit highlight-symbol helm evil-visual-mark-mode csv-mode))))
 
 (set-face-attribute 'default nil :font "Source Code Pro" :height 83)
 
