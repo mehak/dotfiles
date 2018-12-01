@@ -12,8 +12,8 @@
                                  'completion-at-point)))
 
 ;; copy and paste these for now :-(
-;; for key in "~/.ssh/*.pub" { ssh-add $(file-name-sans-extension key) }
-;; for key in "~/.ssh/dst/*.pub" { ssh-add $(file-name-sans-extension key) }
+;; for key in ~/.ssh/*.pub { ssh-add $(file-name-sans-extension key) }
+;; for key in ~/.ssh/dst/*.pub { ssh-add $(file-name-sans-extension key) }
 ;; run the above through eshell-parse-command
 ;;
 ;;
