@@ -317,7 +317,7 @@ Null prefix argument turns off the mode."
 (load "~/.emacs.d/custom/eshell-conf.el")
 
 ;; exwm
-;; (load "~/.emacs.d/custom/my-exwm.el")
+(load "~/.emacs.d/custom/my-exwm.el")
 
 
 ;; custom functions
