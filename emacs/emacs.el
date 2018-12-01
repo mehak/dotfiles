@@ -110,8 +110,12 @@ Return a list of installed packages or nil for every skipped package."
 (require 'ivy-rich)
 (ivy-rich-mode 1)
 
-;; Re-bind M-x to counsel-M-x
+;; Rebind M-x to counsel-M-x
 (global-set-key "\M-x" 'counsel-M-x)
+;; Rebind C-h f to counsel-describe-function
+(global-set-key "\C-hf" 'counsel-describe-function)
+;; Rebind C-h v to counsel-describe-variable
+(global-set-key "\C-hv" 'counsel-describe-variable)
 
 
 ;;;;;;;;;;; Indentation ;;;;;;;;;;;;;;;;;;;;
