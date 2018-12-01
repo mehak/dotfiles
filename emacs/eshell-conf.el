@@ -11,6 +11,8 @@
                                  (kbd "<tab>")
                                  'completion-at-point)))
 
+(setq eshell-history-size 999999)
+
 ;; copy and paste these for now :-(
 ;; for key in ~/.ssh/*.pub { ssh-add $(file-name-sans-extension key) }
 ;; for key in ~/.ssh/dst/*.pub { ssh-add $(file-name-sans-extension key) }
