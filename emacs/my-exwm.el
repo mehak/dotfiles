@@ -11,7 +11,10 @@
 ;; Make class name the buffer name
 (add-hook 'exwm-update-class-hook
           (lambda ()
-            (exwm-workspace-rename-buffer exwm-class-name)))
+            (exwm-workspace-rename-buffer (concat
+                                           exwm-class-name
+                                           " - "
+                                           exwm-title))))
 ;; 's-r': Reset
 (exwm-input-set-key (kbd "s-r") #'exwm-reset)
 ;; 's-w': Switch workspace
