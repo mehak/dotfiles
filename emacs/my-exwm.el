@@ -42,6 +42,21 @@
 ;; show all buffers and allow moving windows from inactive workspace
 (setq exwm-workspace-show-all-buffers t)
 (setq exwm-layout-show-all-buffers t)
+
+;; Toggle line/char mode
+;; https://www.reddit.com/r/emacs/comments/7jftjw/exwm_evil_mode/dr6imc6
+(defun exwm-input-toggle-mode ()
+  "Toggle between line- and char-mode"
+  (with-current-buffer (window-buffer)
+    (when (eq major-mode 'exwm-mode)
+      (if (equal (second (second mode-line-process)) "line")
+          (exwm-input-char-mode)
+        (exwm-input-line-mode)))))
+
+(exwm-input-set-key (kbd "s-i")
+                    (lambda () (interactive)
+                      (exwm-input-toggle-mode)))
+
 ;; Enable EXWM
 (exwm-enable)
 
