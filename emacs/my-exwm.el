@@ -65,27 +65,23 @@
 
 ;; exwm-randr
 (require 'exwm-randr)
-(setq exwm-randr-workspace-output-plist '(0 "DP2"))
-(add-hook 'exwm-randr-screen-change-hook
-          (lambda ()
-            (start-process-shell-command
-             "xrandr" nil "xrandr --output DP2 --auto --output LVDS1 --auto --below DP2")))
-(exwm-randr-enable)
 
-;; Need to modify the below to match extend-to-connected
-;; (defun exwm-change-screen-hook ()
-;;   (let ((xrandr-output-regexp "\n\\([^ ]+\\) connected ")
-;;         default-output)
-;;     (with-temp-buffer
-;;       (call-process "xrandr" nil t nil)
-;;       (goto-char (point-min))
-;;       (re-search-forward xrandr-output-regexp nil 'noerror)
-;;       (setq default-output (match-string 1))
-;;       (forward-line)
-;;       (if (not (re-search-forward xrandr-output-regexp nil 'noerror))
-;;           (call-process "xrandr" nil nil nil "--output" default-output "--auto")
-;;         (call-process
-;;          "xrandr" nil nil nil
-;;          "--output" (match-string 1) "--primary" "--auto"
-;;          "--output" default-output "--off")
-;;         (setq exwm-randr-workspace-output-plist (list 0 (match-string 1)))))))
+(defun exwm-change-screen-hook ()
+  (let ((xrandr-output-regexp "\n\\([^ ]+\\) connected ")
+        default-output)
+    (with-temp-buffer
+      (call-process "xrandr" nil t nil)
+      (goto-char (point-min))
+      (re-search-forward xrandr-output-regexp nil 'noerror)
+      (setq default-output (match-string 1))
+      (forward-line)
+      (if (not (re-search-forward xrandr-output-regexp nil 'noerror))
+          (call-process "xrandr" nil nil nil "--output" default-output "--auto")
+        (call-process
+         "xrandr" nil nil nil
+         "--output" (match-string 1) "--auto"
+         "--output" default-output "--auto" "--below" (match-string 1))
+        (setq exwm-randr-workspace-output-plist (list 0 (match-string 1)))))))
+
+(add-hook 'exwm-randr-screen-change-hook 'exwm-change-screen-hook)
+(exwm-randr-enable)
