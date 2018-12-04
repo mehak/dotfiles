@@ -59,6 +59,10 @@
 (exwm-input-set-key (kbd "s-i")
                     (lambda () (interactive)
                       (exwm-input-toggle-mode)))
+(exwm-input-set-key (kbd "s-l")
+                    (lambda ()
+                      (interactive)
+                      (start-process-shell-command "/usr/bin/slock" nil "/usr/bin/slock")))
 
 ;; Enable EXWM
 (exwm-enable)
