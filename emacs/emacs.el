@@ -312,6 +312,15 @@ Null prefix argument turns off the mode."
 ;; tramp
 (setq tramp-default-method "ssh")
 
+;; Use lexical binding by default
+(add-hook 'emacs-lisp-mode-hook
+          (lambda ()
+            (let  ((auto-insert-query nil)
+                   (auto-insert-alist
+                    '((("\\.el\\'" . "Emacs Lisp header")
+                       ""
+                       ";;; -*- lexical-binding: t; -*-\n\n" '(setq lexical-binding t)))))
+              (auto-insert))))
 
 ;; eshell configuration
 (load "~/.emacs.d/custom/eshell-conf.el")
