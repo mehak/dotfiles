@@ -309,6 +309,11 @@ Null prefix argument turns off the mode."
 (pdf-tools-install)
 
 
+;; erc
+(setq erc-log-channels-directory "~/.erc/logs/")
+(setq erc-save-buffer-on-part t)
+
+
 ;; tramp
 (setq tramp-default-method "ssh")
 
