@@ -65,7 +65,6 @@ Return a list of installed packages or nil for every skipped package."
  '(custom-safe-themes
    (quote
     ("d1cc05d755d5a21a31bced25bed40f85d8677e69c73ca365628ce8024827c9e3" default)))
- '(org-agenda-files (quote ("~/projects/dst/records/notes.org")))
  '(org-export-backends (quote (ascii html icalendar latex man md odt org texinfo)))
  '(package-selected-packages
    (quote
