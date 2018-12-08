@@ -2,6 +2,8 @@
 (defalias 'open 'find-file)
 (defalias 'openo 'find-file-other-window)
 (defalias 'ff 'find-file)
+(defalias 'vi 'find-file)
+(defalias 'vim 'find-file)
 (defalias 'ffo 'find-file-other-window)
 
 ;; use ivy for tab completion
